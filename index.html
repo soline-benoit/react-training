@@ -7,13 +7,21 @@
     <title>React Training</title>
     <script crossorigin="anonymous" src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
     <script crossorigin="anonymous" src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+    <script crossorigin="anonymous" src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
 </head>
 <body>
 <div id="react-root"></div>
 
-<script>
+<script type="text/babel">
+
+    class Hello extends React.Component {
+        render() {
+            return <h1>Hello World</h1>
+        }
+    }
+
     ReactDOM.render(
-        React.createElement('h1', null, 'Hello World'),
+        <Hello/>,
         document.getElementById('react-root')
     )
 </script>
