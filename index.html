@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React Training</title>
+    <script crossorigin="anonymous" src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+    <script crossorigin="anonymous" src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
 </head>
 <body>
+<div id="react-root"></div>
 
+<script>
+    ReactDOM.render(
+        React.createElement('h1', null, 'Hello World'),
+        document.getElementById('react-root')
+    )
+</script>
 </body>
 </html>
