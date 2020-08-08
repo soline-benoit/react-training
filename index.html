@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>React Training</title>
-    <script crossorigin="anonymous" src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
-    <script crossorigin="anonymous" src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+    <script crossorigin="anonymous" src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script crossorigin="anonymous" src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
     <script crossorigin="anonymous" src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
 </head>
 <body>
@@ -14,14 +14,41 @@
 
 <script type="text/babel">
 
-    class Hello extends React.Component {
+    class HelloClass extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                name: 'Soline'
+            }
+            this.handleChange = this.handleChange.bind(this);
+        }
+
+        handleChange(e) {
+            this.setState({
+                name: e.target.value
+            });
+        }
+
         render() {
-            return <h1>Hello World</h1>
+            return (
+                <div id="title">
+                    <h1 className="heading">{this.props.message}</h1>
+                    <p>{this.state.name}, you're learning React {this.props.version}</p>
+                    <p><input type="text" value={this.state.name} onChange={this.handleChange}/></p>
+                </div>
+            )
         }
     }
 
+    const Hello = ({message, version}) => (
+        <div id="title">
+            <h1 className="heading">{message}</h1>
+            <p>Version {version}</p>
+        </div>
+    )
+
     ReactDOM.render(
-        <Hello/>,
+        <HelloClass message="Hello World !" version={16}/>,
         document.getElementById('react-root')
     )
 </script>
