@@ -1,0 +1,45 @@
+{
+  "name": "final",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.11.1",
+    "bootstrap": "^4.3.1",
+    "mobx": "^5.15.5",
+    "mobx-react": "^6.2.5",
+    "popper.js": "^1.14.7",
+    "react": "^16.8.2",
+    "react-app-rewire-mobx": "^1.0.9",
+    "react-app-rewired": "^2.1.6",
+    "react-dom": "^16.8.2",
+    "react-icons": "^3.4.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.5",
+    "uniqid": "^5.0.3"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "legacyDecorators": true
+      }
+    }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "babel-plugin-import": "^1.13.0",
+    "customize-cra": "^1.0.0",
+    "mobx-react-devtools": "^6.1.1"
+  }
+}
